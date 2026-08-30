@@ -1,0 +1,26 @@
+env:
+  num_bs: 9
+  num_ues: 24
+  area_size_m: 600.0
+  episode_steps: 30
+  dt_s: 0.2
+  candidate_k: 4
+  seed: 1
+
+model:
+  hidden_dim: 32
+  num_layers: 1
+  num_heads: 4
+  dropout: 0.0
+
+train:
+  seed: 2
+  total_steps: 400
+  warmup_steps: 32
+  buffer_size: 256
+  batch_size: 8
+  learning_rate: 0.001
+  epsilon_decay_steps: 250
+  eval_interval: 200
+  eval_episodes: 1
+  checkpoint_interval: 200

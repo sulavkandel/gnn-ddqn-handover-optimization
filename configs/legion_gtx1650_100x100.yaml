@@ -1,0 +1,41 @@
+env:
+  num_bs: 100
+  num_ues: 100
+  area_size_m: 2000.0
+  episode_steps: 500
+  dt_s: 0.2
+  candidate_k: 8
+  carrier_ghz: 3.5
+  bandwidth_mhz: 20.0
+  bs_tx_power_dbm: 30.0
+  shadow_std_db: 7.0
+  shadow_correlation: 0.97
+  seed: 7
+
+model:
+  hidden_dim: 64
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.10
+
+train:
+  seed: 17
+  total_steps: 150000
+  warmup_steps: 2000
+  buffer_size: 4000
+  batch_size: 2
+  gamma: 0.99
+  learning_rate: 0.0002
+  weight_decay: 0.00001
+  per_alpha: 0.6
+  per_beta_start: 0.4
+  per_beta_end: 1.0
+  target_tau: 0.005
+  gradient_clip: 10.0
+  train_every: 2
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 100000
+  eval_interval: 10000
+  eval_episodes: 3
+  checkpoint_interval: 10000

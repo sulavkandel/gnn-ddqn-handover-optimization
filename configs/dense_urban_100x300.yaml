@@ -1,0 +1,28 @@
+env:
+  # Stress case: same 100 cells with three UEs per cell on average.
+  num_bs: 100
+  num_ues: 300
+  area_size_m: 2000.0
+  episode_steps: 500
+  dt_s: 0.2
+  candidate_k: 8
+  demand_min_mbps: 1.0
+  demand_max_mbps: 12.0
+  seed: 11
+
+model:
+  hidden_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.10
+
+train:
+  seed: 23
+  total_steps: 400000
+  warmup_steps: 8000
+  buffer_size: 8000
+  batch_size: 16
+  learning_rate: 0.0002
+  epsilon_decay_steps: 250000
+  eval_interval: 25000
+  checkpoint_interval: 25000

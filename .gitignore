@@ -1,0 +1,35 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Generated training outputs
+runs/
+evaluation/
+logs/
+*.log
+
+# Local data and secrets
+.env
+.env.*
+*.pem
+*.key
+data/
+raw/
+
+# Editors and Windows
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
